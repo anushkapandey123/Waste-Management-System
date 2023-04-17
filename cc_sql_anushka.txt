@@ -1,0 +1,32 @@
+
+use demo1;
+create table flat(flat_no int,owner varchar(255));
+drop table flat;
+
+create table flat(flat_no varchar(50) primary key, bhk varchar(50), owner varchar(255), square_feet int);
+
+
+create table residents(flat_no varchar(50), name varchar(255), gender varchar(2), email varchar(120), dob date, mobile_no bigint, foreign key(flat_no) references flat(flat_no) on delete cascade);
+
+create table staff(name varchar(255), addr varchar(255), date_of_joining date, staff_id int, flat_no varchar(20), salary float);
+
+create table parking(flat_no varchar(50) primary key, resident_vn varchar(250), fee float, foreign key(flat_no) references flat(flat_no));
+
+create table visitors(flat_no varchar(50), name varchar(255), date_of_visit date, phone_no bigint, vehicle_number varchar(250));
+insert into flat values("A01", "2-BHK", "Anchal Agarwal", 200);
+insert into flat values("B01", "3-BHK", "Vimal Khanna", 300);
+insert into flat values("C01", "4-BHK", "Arvind Kaushik", 400);
+
+insert into residents values("A01", "Anchal Agarwal", "F", "anchal20@gmail.com", "1988-11-03", 7833234178);
+insert into residents values("B01", "Vimal Khanna", "M", "vimal28@gmail.com", "1985-02-03", 7833200178);
+insert into residents values("C01", "Arvind Kaushik", "M", 'arvind03@gmail.com', '1979-09-07', 7566409867);
+
+insert into staff values("Sunder Shah", "A-Block Rail Colony", '2004-08-12', 1, "A01", 21000);
+insert into staff values("Hari Rawat", "H-Block Corporate Colony", '2008-01-15', 3, "C01", 21000);
+insert into staff values("Sheena Bajaj", "E-Block SB Colony", '2008-12-12', 2, "B01", 21000);
+
+insert into parking values("A01", 1, 1000);
+insert into parking values("B01", 2, 2000);
+
+insert into visitors values("A01", "Benny Sharma", '2022-9-11', 8895674889, 'KA93-WQ-2345');
+insert into visitors values("B01", "Muskan Kesarwani", '2022-11-15', 9644302101, 'KA23-RT-6721');
