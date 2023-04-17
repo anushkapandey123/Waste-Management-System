@@ -3,6 +3,7 @@ mydb = mysql.connector.connect(
 host="database-2.cjueszsg36jc.us-east-1.rds.amazonaws.com",
 user="admin",
 database="pes1ug20cs123_project"
+password = "abc12345"
 )
 c = mydb.cursor()
 import streamlit as st
