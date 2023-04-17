@@ -1,0 +1,6 @@
+streamlit
+Pillow
+pandas
+database
+webbrowser
+plotly.express
