@@ -4,10 +4,10 @@ from PIL import Image
 
 main_image = Image.open('main_banner.png')
 st.image(main_image,use_column_width='always')
-st.title("PES1UG20CS123")
-st.subheader("DEVIKA S")
+st.title("Team 6 - PES1UG20CS072, PES1UG20CS073, PES1UG20CS106, PES1UG20CS123")
+st.subheader("Team 6 - Anushka Pandey, Anushka Siri Raghunandan, B Praneetha, Devika S")
 def main():
-    st.title("PES1UG20CS123")
+    st.title("Project 3")
     
     st.subheader("WASTE MANAGEMENT SYSTEM - UE20CS301")
 
