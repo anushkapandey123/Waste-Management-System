@@ -20,5 +20,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.HOST_KEY}}
           REMOTE_HOST: "ec2-107-21-164-146.compute-1.amazonaws.com"
           REMOTE_USER: "my-web-server"
-          TARGET: ${{ secrets.TARGET_DIR }}
+          TARGET: ${{secrets.TARGET_DIR}}
     
