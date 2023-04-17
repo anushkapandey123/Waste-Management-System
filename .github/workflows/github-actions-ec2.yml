@@ -17,7 +17,7 @@ jobs:
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ssh -i "ttt.pem" ec2-user@ec2-107-21-164-146.compute-1.amazonaws.com}}
+          SSH_PRIVATE_KEY: ${{secrets.HOST_KEY}}
           REMOTE_HOST: "ec2-107-21-164-146.compute-1.amazonaws.com"
           REMOTE_USER: "my-web-server"
           TARGET: ${{ secrets.TARGET_DIR }}
