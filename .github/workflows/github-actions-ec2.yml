@@ -16,10 +16,12 @@ jobs:
 
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.HOST_KEY }}
-          REMOTE_HOST: "ec2-107-21-164-146.compute-1.amazonaws.com"
-          REMOTE_USER: ${{ secrets.HOSTNAME }}
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
+          script: |
+            streamlit run app.py
     
 
