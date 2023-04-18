@@ -2,11 +2,11 @@ name: Push-to-ec2
 
 on:
   push:
-    branches:
-     - trial_1
+    branches: [ trial_1 ]
   delete:
-    branches:
-      - trial_1
+    branches: [trial_1 ]
+     
+
 
 jobs:
   deploy:
