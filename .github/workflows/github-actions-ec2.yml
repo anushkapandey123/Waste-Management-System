@@ -6,9 +6,6 @@ on:
       - trial_1
   
     
-     
-
-
 jobs:
   deploy:
     name: Deploy to EC2 on trial_1 branch push
