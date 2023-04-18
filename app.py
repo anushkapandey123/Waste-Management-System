@@ -7,9 +7,9 @@ st.image(main_image,use_column_width='always')
 st.title("Team 6 - PES1UG20CS072, PES1UG20CS073, PES1UG20CS106, PES1UG20CS123")
 st.subheader("Team 6 - Anushka Pandey, Anushka Siri Raghunandan, B Praneetha, Devika S")
 def main():
-    st.title("Project 3")
+    st.title("Project 3 - Deployment of Web App Using AWS Cloud")
     
-    st.subheader("WASTE MANAGEMENT SYSTEM - UE20CS344")
+    st.subheader("WASTE MANAGEMENT SYSTEM DEPLOYED ON AN EC2 INSTANCE")
 
     main1_image = Image.open('Screenshot (11075).png')
     st.image(main1_image,use_column_width='always')
