@@ -1,16 +1,25 @@
-name: Remote ssh command
-on: [push]
+name: Push-to-ec2
+
+on:
+  push:
+    branches:
+     - trial_1
+
 jobs:
-  build:
-    name: Build
+  deploy:
+    name: Deploy to EC2 on trial_1 branch push
     runs-on: ubuntu-latest
+
     steps:
-      - name: Executing remote ssh commands using ssh key
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST_DNS }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            cd ~/YOUR/TARGET/DIR
-            streamlit run app.py
+      - name: Checkout the files
+        uses: actions/checkout@v2
+
+      - name: Deploy to Server 1
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.HOST_KEY }}
+          REMOTE_HOST: "ec2-107-21-164-146.compute-1.amazonaws.com"
+          REMOTE_USER: "my-web-server"
+          TARGET: ${{ secrets.TARGET_DIR }}
+    
+
