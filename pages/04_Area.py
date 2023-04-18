@@ -2,7 +2,7 @@ import streamlit as st
 
 import database as db
 import pandas as pd
-st.title("PES1UG20CS123")
+st.title("PES1UG20CS072, PES1UG20CS073, PES1UG20CS106, PES1UG20CS123")
 st.subheader("Area Details")
 
 
