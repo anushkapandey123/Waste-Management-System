@@ -1,0 +1,13 @@
+title: My Streamlit App
+description: A simple Streamlit app
+source: app.py
+dependencies:
+  - python=3.10
+  - pip:
+    - streamlit==0.87.0
+deploy:
+  aws:
+    region: us-east-1b
+    instance_type: t2.micro
+    key_name: aaa.pem
+    ssh_options: "ssh -i "aaa.pem" ubuntu@ec2-52-207-220-196.compute-1.amazonaws.com"
