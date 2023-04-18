@@ -23,5 +23,6 @@ jobs:
           TARGET: ${{ secrets.TARGET_DIR }}
           script: |
             streamlit run app.py
+            
     
 
