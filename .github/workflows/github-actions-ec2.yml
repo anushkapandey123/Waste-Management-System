@@ -24,4 +24,4 @@ jobs:
           script: |
             streamlit run app.py
             
-    
+  
