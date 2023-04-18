@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - trial_1
+  delete:
+    branches:
+      - trial_1
       
 jobs:
   deploy:
