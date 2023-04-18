@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 import database as db
-st.title("PES1UG20CS123")
+st.title("Push is working Pandey ji!")
 st.subheader("Citizen Details")
 
 
