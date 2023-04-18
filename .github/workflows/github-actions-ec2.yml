@@ -3,8 +3,8 @@ name: Push-to-ec2
 on:
   push:
     branches: [ trial_1 ]
-  delete:
-    branches: [trial_1 ]
+  pull_request:
+    branches: [ trial_1 ]
      
 
 
