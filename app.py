@@ -9,7 +9,7 @@ st.subheader("Team 6 - Anushka Pandey, Anushka Siri Raghunandan, B Praneetha, De
 def main():
     st.title("Project 3")
     
-    st.subheader("WASTE MANAGEMENT SYSTEM - UE20CS321")
+    st.subheader("WASTE MANAGEMENT SYSTEM - UE20CS301")
 
     main1_image = Image.open('Screenshot (11075).png')
     st.image(main1_image,use_column_width='always')
