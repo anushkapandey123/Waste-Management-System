@@ -19,6 +19,7 @@ if choice == "Create ✅":
         uid = st.text_input("Enter User ID")
         dob = st.date_input("Date of Birth")
         phno = st.text_input("Phone Number")
+	pan_no = st.text_input("APAN Card")
 
     with col2 :
         name = st.text_input("Name")
